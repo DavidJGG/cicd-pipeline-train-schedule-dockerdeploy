@@ -66,7 +66,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh "docker system purge -a"
+                    sh "docker system prune -a"
                 }
             }
         }
