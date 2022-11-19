@@ -59,5 +59,16 @@ pipeline {
                 }
             }
         }
+        
+        stage('Purge local :)') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    sh "docker system purge -a"
+                }
+            }
+        }
     }
 }
